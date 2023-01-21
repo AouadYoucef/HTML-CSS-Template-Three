@@ -19,11 +19,9 @@
 
 html {
     scroll-behavior: smooth;
-}
-
-body {
     font-family: 'Cairo', sans-serif;
 }
+
 
 ul {
     list-style: none;
@@ -169,18 +167,20 @@ a {
     top: -30px;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: -2;
     background-color: #ececec;
     transform: skewY(-6deg);
     transform-origin: top left;
 }
 
 .landing .container{
-min-height: calc(100vh - 100px);
+min-height: calc(100vh - 65px);
 display: flex;
 justify-content: space-between;
 align-items: center;
-padding-bottom: 120px;
+
+padding-bottom: 110px;
+z-index: -1;
 }
 
 .landing .text{
@@ -193,16 +193,48 @@ padding-bottom: 120px;
     letter-spacing: -2px;
 }
 
+@media (max-width:767px) {
+    .landing .text h1{
+        font-size: 28px;
+    }
+
+    .landing .text p{
+        font-size: 18px;
+    }
+}
 .landing .text p {
-    font-size: 22px;
-    margin: 5px;
-    line-height: 1.8;
+    font-size: 24px;
+    margin: 5px 0 ;
+    line-height: 1.7;
     color: #777;
-    max-width: 480px;
+    max-width: 500px;
 }
 .landing .image img{
+    position: relative;
     width: 600px;
-    max-width: 100%;
+    animation: updown 5s linear infinite;
+    transform: translateY(-40px);
+}
+
+@keyframes updown {
+    0%, 100% {
+        top:0;
+    }
+
+    50% {
+        top:50px;
+    }
+}
+@media (max-width:991px) {
+    .landing .text {
+        text-align: center;
+    }
+    .landing .text p{
+        margin: 10px auto;
+    }
+    .landing .image {
+        display: none;
+    }
 }
 
 .landing .go-down{
@@ -210,15 +242,29 @@ padding-bottom: 120px;
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(-20px);
     transition: var(--main-transition);
 
 }
+
 
 .landing .go-down:hover{
     color: var(--main-color-alt);
 }
 .landing .go-down i {
+animation: bouncing 1.5s infinite;
 
+}
+
+
+
+@keyframes bouncing {
+    0%, 10% , 20%, 50%, 80%, 100% {
+        transform:translateY(0) ;
+    }
+
+    40%,60% {
+        transform: translateY(-15px);
+    }
 }
 /* End Landing */
