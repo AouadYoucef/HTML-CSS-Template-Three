@@ -1110,6 +1110,7 @@ a {
 }
 
 
+
 /* End Skills */
 
 /* Start Work Steps */
@@ -1131,7 +1132,7 @@ a {
 }
 
 @media (max-width:991px) {
-    .work-steps .container{
+    .work-steps .container {
         flex-direction: column;
         justify-content: center;
     }
@@ -1155,12 +1156,12 @@ a {
     transition: var(--main-transition);
 }
 
-.work-steps .info .box::before{
+.work-steps .info .box::before {
     content: "";
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: 0px;
     height: 0px;
     background-color: #ededed;
@@ -1168,7 +1169,7 @@ a {
     z-index: -1;
 }
 
-.work-steps .info .box:hover::before{
+.work-steps .info .box:hover::before {
     width: 100%;
     height: 100%;
 }
@@ -1186,8 +1187,8 @@ a {
 }
 
 @media (max-width:767px) {
-    .work-steps .info .box img  {
-        margin:0 0 20px 0;
+    .work-steps .info .box img {
+        margin: 0 0 20px 0;
     }
 }
 
@@ -1204,3 +1205,156 @@ a {
 }
 
 /* End Work Steps */
+
+/* Start Events */
+.events {
+    padding: var(--main-padding-bottom) 0;
+    position: relative;
+}
+
+.events .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.events .title {
+    text-align: center;
+    margin: 30px 0 20px;
+    font-size: 30px;
+}
+
+.events .description {
+    margin: 0;
+    text-align: center;
+    line-height: 1.7;
+    font-size: 19px;
+    color: #777;
+}
+
+.events .container img {
+    max-width: 450px;
+}
+
+@media (max-width:991px) {
+    .events .container img {
+        display: none;
+    }
+}
+
+
+.events .container .info {
+    flex: 1;
+}
+
+.events .container .info .time {
+    display: flex;
+    align-items: center;
+    margin: 20px auto;
+    gap: 10px;
+    justify-content: center;
+    ;
+}
+
+.events .container .info .time .unit {
+    border: 1px solid #d4d4d4;
+    border-radius: 6px;
+    text-align: center;
+    width: 75px;
+    transition: var(--main-transition);
+}
+
+
+.events .container .info .time .unit span {
+    display: block;
+}
+
+.events .container .info .time .unit span:first-child {
+    color: var(--main-color);
+    font-size: 36px;
+    font-weight: bold;
+    padding: 15px;
+}
+
+.events .container .info .time .unit span:last-child {
+    padding: 5px 5px;
+    border-top: 1px solid #d4d4d4;
+    font-size: 14px;
+    transition: var(--main-transition);
+}
+
+.events .container .info .time .unit:hover,
+.events .container .info .time .unit:hover span:last-child {
+    border-color: var(--main-color);
+}
+
+
+
+.events .container .subscribe {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.events .container .subscribe form {
+    width: 600px;
+    margin: 20px auto;
+    padding: 30px 40px;
+    background-color: #f6f5f5;
+    border-radius: 50px;
+    display: flex;
+    gap: 20px;
+}
+
+@media (max-width:767px) {
+    .events .container .subscribe form {
+        max-width: 100%;
+        padding: 20px;
+        flex-direction: column;
+        border-radius: 0;
+    }
+}
+
+.events .container .subscribe form input[type="email"] {
+    padding: 20px;
+    border-radius: 50px;
+    flex: 1;
+    border: none;
+    caret-color: var(--main-color);
+    outline: none;
+
+}
+
+@media (max-width:767px) {
+    .events .container .subscribe form input[type="email"] {
+        border-radius: 0;
+    }
+}
+
+.events .container .subscribe form input[type="submit"] {
+    background-color: var(--main-color);
+    border: none;
+    color: white;
+    border-radius: 50px;
+    font-weight: bold;
+    padding: 0 20px;
+    opacity: 1;
+    cursor: pointer;
+}
+
+@media (max-width:767px) {
+    .events .container .subscribe form input[type="submit"] {
+        padding: 20px 20px;
+        border-radius: 0;
+    }
+}
+
+input[type="email"]:focus::placeholder {
+    transition: var(--main-transition);
+    opacity: 0;
+}
+
+.events .container .subscribe form input[type="submit"]:hover {
+    background-color: var(--main-color-alt);
+}
+
+/* End Events */
