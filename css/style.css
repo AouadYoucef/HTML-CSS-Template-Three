@@ -955,27 +955,27 @@ a {
     background-color: var(--section-background);
 }
 
-.services .container{
+.services .container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 40px;
 }
 
 
-.services .container .box{
+.services .container .box {
     background-color: white;
-    box-shadow: 0 12px 20px 0 rgb(0, 0, 0 , 13%), 0 2px 4px 0 rgb(0, 0, 0, 12%);
+    box-shadow: 0 12px 20px 0 rgb(0, 0, 0, 13%), 0 2px 4px 0 rgb(0, 0, 0, 12%);
     counter-increment: services;
     transition: var(--main-transition);
     position: relative;
 }
 
-.services .container .box:hover{
+.services .container .box:hover {
     transform: translateY(-10px);
 }
 
 
-.services .container .box:before{
+.services .container .box:before {
     content: "";
     position: absolute;
     top: 0;
@@ -988,11 +988,11 @@ a {
     transition-timing-function: ease;
 }
 
-.services .container .box:hover:before{
+.services .container .box:hover:before {
     width: 100%;
 }
 
-.services .container .box > i{
+.services .container .box>i {
     color: #d5d5d5;
     margin: 40px auto 20px;
     display: block;
@@ -1001,7 +1001,7 @@ a {
 
 }
 
-.services .container .box > h3{
+.services .container .box>h3 {
     color: var(--main-color);
     font-size: 25px;
     margin: 20px auto 30px;
@@ -1010,7 +1010,7 @@ a {
 }
 
 
-.services .container .box .info{
+.services .container .box .info {
     width: 100%;
     padding: 15px;
     position: relative;
@@ -1018,7 +1018,7 @@ a {
     text-align: right;
 }
 
-.services .container .box .info:before{
+.services .container .box .info:before {
     content: "0" counter(services);
     position: absolute;
     background-color: var(--main-color);
@@ -1035,7 +1035,7 @@ a {
     padding-right: 15px;
 }
 
-.services .container .box .info:after{
+.services .container .box .info:after {
     content: "";
     position: absolute;
     background-color: #d5d5d5;
@@ -1053,6 +1053,61 @@ a {
 
 }
 
-
-
 /* End Services */
+
+/* Start Skills */
+
+.our-skills {
+    padding: var(--main-padding-top) 0;
+    position: relative;
+}
+
+.our-skills .container {
+    display: flex;
+    align-items: center;
+}
+
+.our-skills .container .skills {
+    width: 100%;
+    flex: 1;
+}
+
+@media (max-width:991px) {
+    .our-skills .container img {
+        display: none;
+    }
+}
+
+.our-skills .container .skills .skill h3 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.our-skills .container .skills .skill h3 > span {
+    background-color: white;
+    border: 1px solid #e4e4e4;
+    padding: 3px 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: var(--main-color);
+    width: fit-content;
+    text-align: right;
+    
+}
+
+.our-skills .container .skills .skill .the-progress{
+    background-color: var(--section-background);
+    height: 30px;
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.our-skills .container .skills .skill .the-progress span {
+    position:absolute;
+    background-color: var(--main-color);
+    height: 30px;
+}
+
+
+/* End Skills */
