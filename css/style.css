@@ -1216,6 +1216,25 @@ a {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    position: relative;
+}
+
+.events .container .top-dot {
+position: absolute;
+top: 0;
+right: -90px;
+}
+
+@media(max-width:1199px) {
+    .events .container .top-dot{
+        display: none;
+    }
+}
+
+.events .container .bottom-dot {
+    position: absolute;
+    bottom: 50px;
+    left: -90px;
 }
 
 .events .title {
@@ -1503,9 +1522,15 @@ input[type="email"]:focus::placeholder {
     transition: var(--main-transition);
 }
 
-.pricing .box a:hover{
+.pricing .box a:hover {
     color: white;
     background-color: var(--main-color);
 }
 
 /* End Pricing */
+
+
+.videos {
+    padding: var(--main-padding-bottom) var(--main-padding-top);
+    position: relative;
+}
